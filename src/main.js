@@ -1,8 +1,12 @@
 // 入口文件
 import Vue from 'vue';
 
+// 导入路由的包
+import VueRouter from 'vue-router';
+
 //导入 Mui
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
 
 // 按需导入Mint-ui中的组件
 import { Header } from 'mint-ui';
