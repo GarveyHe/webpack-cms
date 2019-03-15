@@ -2,16 +2,16 @@
   <div>
     <!-- 轮播图 -->
     <mt-swipe :auto="4000">
-      <mt-swipe-item>1</mt-swipe-item>
-      <mt-swipe-item>2</mt-swipe-item>
-      <mt-swipe-item>3</mt-swipe-item>
+      <mt-swipe-item><img src="../../images/banner1.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item><img src="../../images/banner2.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item><img src="../../images/banner3.jpg" alt=""></mt-swipe-item>
     </mt-swipe>
     <ul class="mui-table-view mui-grid-view mui-grid-9">
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-        <a href="#">
+        <router-link to="/home/newslist">
           <img src="../../images/menu1.png" alt="">
           <div class="mui-media-body">新闻资讯</div>
-        </a>
+        </router-link>
       </li>
       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
         <a href="#">
@@ -48,22 +48,12 @@
 </template>
 
 <script>
+
 </script>
 
 <style lang="scss" scoped>
 .mint-swipe {
   height: 200px;
-  .mint-swipe-item {
-    &:nth-child(1) {
-      background-color: red;
-    }
-    &:nth-child(2) {
-      background-color: blue;
-    }
-    &:nth-child(3) {
-      background-color: green;
-    }
-  }
 }
 .mui-grid-view.mui-grid-9 {
     background-color: white;

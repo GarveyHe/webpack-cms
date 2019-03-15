@@ -1,10 +1,16 @@
 // 入口文件
 import Vue from 'vue';
-
 // 1.1 导入 vue-router
 import VueRouter from 'vue-router';
 // 1.2 安装路由
 Vue.use(VueRouter);
+
+// 2.1 导入 vue-resource
+import VueResource from 'vue-resource';
+// 2.2 安装vue-resource
+Vue.use(VueResource);
+// 2.3 全局配置请求的根路径
+Vue.http.options.root = 'http://vue.studyit.io';
 
 // 导入 Mui的样式
 import './lib/mui/css/mui.min.css'
