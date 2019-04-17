@@ -27,7 +27,7 @@
 					</a>
 				</div>
 				<div class="mui-scroll">
-					<a :class="['mui-control-item', item.id = 0 ? 'mui-active' : '']" v-for="item in cates" :key="item.id" @click='getPhotoListByCateId(item.id)'>{{ item.title }}</a>
+					<a :class="['mui-control-item', item.id = 0 ? 'mui-active' : '']" v-for="item in cates" :key="item.id" @tap='getPhotoListByCateId(item.id)'>{{ item.title }}</a>
 				</div>
 			</div>
 		</div>
