@@ -42,30 +42,11 @@ import 'mint-ui/lib/style.css'
 // 1.3导入自己的router.js路由模块
 import router from './router.js'
 
-// 配置vuex的步骤
-// 1.运行 cnpm i vuex -s
-// 2.导入包
-import Vuex from Vuex;
-// 3.注册vuex到vue中
-Vue.use(Vuex);
-// 4.new Vuex.store () 实例，得到一个数据仓储对象
-const store = new Vuex.Store({
-  state: {
-    // 如果在组件中想要访问 store 中的数据，只能通过 this.$store.state.***来访问
-    count: 0
-  },
-  mutations: {
-
-  }
-})
-
-
 // 导入app根组件
 import app from './App.vue';
 
 var vm = new Vue({
   el: '#app',
   render: c => c(app),
-  router, // 挂载路由对象
-  store   // 5.将 vuex 创建的 store 挂载到vm实例上，只要挂载到vm实例上，任何组件都能使用store来存取数据。
+  router // 挂载路由对象
 })
