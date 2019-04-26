@@ -2,9 +2,9 @@
   <div class="app-container"> 
     <!-- 顶部header区域 -->
 		<mt-header fixed title="测试项目">
-			<router-link to="/" slot="left">
-				<mt-button icon="back">返回</mt-button>
-			</router-link>
+			<span slot="left">
+				<mt-button icon="back" v-show="flag" @click="goBack()">返回</mt-button>
+			</span>
 			<mt-button icon="more" slot="right"></mt-button>
 		</mt-header>
 
@@ -36,7 +36,30 @@
 </template>
 
 <script>
-
+	export default {
+		data() {
+			return {
+				flag: false
+			}
+		},
+		created() {
+			this.flag = this.$route.path === '/home' ? false : true;
+		},
+		methods: {
+			goBack() {
+				this.$router.go(-1);
+			}
+		},
+		watch: {
+			"$route.path": function(newVal) {
+				if(newVal === '/home') {
+					this.flag = false;
+				}else {
+					this.flag = true;
+				}
+			}
+		},
+	}
 </script>
 
 <style lang="scss" scoped>
